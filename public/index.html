@@ -16,7 +16,7 @@ select[type=text], select, option {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
-    border-radius: 4px; 
+    border-radius: 20px; 
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
@@ -124,7 +124,7 @@ label {
        <option value="3ft-4ft">3ft-4ft</option>
        <option value="4ft-5ft">4ft-5ft</option>
        <option value="5ft-6ft">5ft-6ft</option>
-       <option value="7ft-8ft">7ft-8ft</option>
+       <option value="6ft-7ft">6ft-7ft</option>
      </select>
 
     <label for="weight">Weight</label>
@@ -138,14 +138,20 @@ label {
      </select>
 
      <label for="activityLevel">Your Activity Level</label>
-     <select name="ActivityLevel">
-       <option value="low">Low</option>
-       <option value="moderate">Moderate</option>
-       <option value="hight">High</option>
-     </select>
+      <select name="ActivityLevel">
+        <option value="low">Low</option>
+        <option value="moderate">Moderate</option>
+        <option value="high">High</option>
+      </select>
 
+     <label for="desired">Desired weight you want to lose.</label>
+      <select name="Desired">
+        <option value="10-30-lose">10-30 lbs.</option>
+        <option value="30-60-lose">30-60 lbs.</option>
+        <option value="30-90-lose">30-90 lbs.</option>
+        <option value="100+-lose">100+ lbs.</option>
+      </select>
     <input type="submit" value="Submit">
-
   </form>
 </div>
 
@@ -164,7 +170,7 @@ label {
 </body>
   <script type="text/javascript">
    AOS.init({
-     duration: 1200,
+     duration: 1700,
     })
   </script>
 </html>
