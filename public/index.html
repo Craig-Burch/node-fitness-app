@@ -2,41 +2,39 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>  
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
-/* Style inputs with type="text", select elements and textareas */
-select[type=text], select, option {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
 
-/* Style the submit button with a specific background color etc */
+/* I would like to point out that the links above are calling in the effect for the logo movement. I feel the need to point out seeing as it is not my creation, though I do enjoy using his effects on my projects.  */
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+select[type=text], select, option {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+}
 input[type=submit] {
     background-color: #FF6263;
     width:130px;
     color: black;
     font-size: 17px;
-    padding: 12px 20px;
+    padding: 12px 20px; 
     border: none;
     cursor: pointer;
     border-radius: 35px;
 }
-
-/* When moving the mouse over the submit button, add a yellow color */
 input[type=submit]:hover {
     background-color: #FF314F;
     border: 1px solid black;
-
 }
-
-/* Add a background color and some padding around the form */
 .container {
     border-radius: 20px;
     background-color: #CFD0D7;
@@ -45,19 +43,15 @@ input[type=submit]:hover {
     text-align: center;
     font-size: 30px;
     border:3px solid #FFF7F1;
-    height:120%;
-
 }
 label {
     font-weight: 700;
 }
-
 .headerbg {
 	float: left;
 	width: 100%;
 	height:30%;
 }
-
 .headerimage {
     width: 30%;
     height: 30%;
@@ -70,6 +64,31 @@ label {
     background-color: #FD6660;
 
 }
+@media only screen and (max-width: 600px) {
+    .container {
+       font-size: 45px;
+    }
+}@media only screen and (max-width: 600px) {
+    .headerimage  {
+       width: 60%;
+       height: 40%;
+    }
+}@media only screen and (max-width: 600px) {
+    .headerimage img {
+       width: 60%;
+       height: 60%;
+    }
+}@media only screen and (max-width: 600px) {
+    input[type=submit] {
+       font-size: 23px;
+       width:160px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mobile option {
+       font-size: 23px;
+    }
+}
 </style>
 <body style = "background-color: #FF6263;">
 <div class="container">
@@ -79,7 +98,7 @@ label {
     </div>
   </div>
 
-  <form action="./connect.php" method="POST">
+  <form class = mobile action="./connect.php" method="POST">
 
     <label for="gender">Gender</label>
      <select name="Gender">
@@ -127,8 +146,6 @@ label {
 
   </form>
 </div>
-
-
 
 <script src="/socket.io/socket.io.js"></script>
  <script>
