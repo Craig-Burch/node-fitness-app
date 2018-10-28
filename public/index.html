@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>  
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -95,7 +96,7 @@ label {
 <div class="container">
   <div class = "headerbg">
     <div class = "headerimage"> 
-    	<img src = "fit1.png" height =50%; width = 50%; >
+    	<img data-aos="flip-down" src = "fit1.png" height =50%; width = 50%; >
     </div>
   </div>
 
@@ -161,5 +162,10 @@ label {
 	});
  </script>
 </body>
+  <script type="text/javascript">
+   AOS.init({
+     duration: 1200,
+    })
+  </script>
 </html>
 
