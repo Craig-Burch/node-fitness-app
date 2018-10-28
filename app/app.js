@@ -1,11 +1,7 @@
-const path = require('path');
-const http = require('http');
-const express = require('express');
-const socketIO = require('socket.io');
 
-
-console.log('BackEnd Logic Connected');
-
+if (document.getElementById('Gender').value == "male") {
+       console.log('The first test works!!');
+}
 
 
 
