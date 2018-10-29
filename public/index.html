@@ -99,17 +99,17 @@ label {
     	<img data-aos="flip-down" src = "fit1.png" height =50%; width = 50%; >
     </div>
   </div>
-
+ 
   <form class = mobile action="../app/app.js" method="POST">
 
     <label for="gender">Gender</label>
-     <select id="Gender">
+     <select name="Gender">
        <option value="male">Male</option>
        <option value="female">Female</option>
      </select>
 
-    <label for="age">Age</label>
-     <select id="Age">
+    <label for="height">Age</label>
+     <select name="Height">
        <option value="10-15">10-15 Years Old</option>
        <option value="15-20">15-20 Years Old</option>
        <option value="20-30">20-30 Years Old</option>
@@ -120,7 +120,7 @@ label {
      </select>
 
     <label for="height">Height</label>
-     <select id="Height">
+     <select name="Height">
        <option value="3ft-4ft">3ft-4ft</option>
        <option value="4ft-5ft">4ft-5ft</option>
        <option value="5ft-6ft">5ft-6ft</option>
@@ -128,7 +128,7 @@ label {
      </select>
 
     <label for="weight">Weight</label>
-     <select id="Weight">
+     <select name="Weight">
        <option value="75-100">75-100 lbs.</option>
        <option value="101-150">101-150 lbs.</option>
        <option value="151-200">151-200 lbs.</option>
@@ -138,14 +138,14 @@ label {
      </select>
 
      <label for="activityLevel">Your Activity Level</label>
-      <select id="ActivityLevel">
+      <select name="ActivityLevel">
         <option value="low">Low</option>
         <option value="moderate">Moderate</option>
         <option value="high">High</option>
       </select>
 
      <label for="desired">Desired weight you want to lose.</label>
-      <select id="Desired">
+      <select name="Desired">
         <option value="10-30-lose">10-30 lbs.</option>
         <option value="30-60-lose">30-60 lbs.</option>
         <option value="30-90-lose">30-90 lbs.</option>
@@ -166,9 +166,6 @@ label {
 	socket.on('disconnect', () => {
 		console.log('Disconnected from server');
 	});
- </script>
- <script id = jslogic> 
- 	
  </script>
 </body>
   <script type="text/javascript">
