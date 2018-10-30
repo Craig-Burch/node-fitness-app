@@ -66,7 +66,7 @@ label {
 
 }
 
-ol {
+p {
 	list-style-type: none;
 	font-size: 30px;
 	font-weight: 700;
@@ -108,63 +108,14 @@ ol {
     </div>
   </div>
  
-  <ol id ="messages"></ol>
-
   
-  <form id="submit-form" class= "mobile" action = "output.html">
-
-    <label for="gender">Gender</label>
-     <select id="Gender">
-       <option value="male">Male</option>
-       <option value="female">Female</option>
-     </select>
-
-    <label for="age">Age</label>
-     <select id="Age">
-       <option value="10-15">10-15 Years Old</option>
-       <option value="15-20">15-20 Years Old</option>
-       <option value="20-30">20-30 Years Old</option>
-       <option value="30-40">30-40 Years Old</option>
-       <option value="40-50">40-50 Years Old</option>
-       <option value="50-60">50-60 Years Old</option>
-       <option value="60+">60+ Years Old</option>
-     </select>
-
-    <label for="height">Height</label>
-     <select id="Height">
-       <option value="3ft-4ft">3ft-4ft</option>
-       <option value="4ft-5ft">4ft-5ft</option>
-       <option value="5ft-6ft">5ft-6ft</option>
-       <option value="6ft-7ft">6ft-7ft</option>
-     </select>
-
-    <label for="weight">Weight</label>
-     <select id="Weight">
-       <option value="75-100">75-100 lbs.</option>
-       <option value="101-150">101-150 lbs.</option>
-       <option value="151-200">151-200 lbs.</option>
-       <option value="201-250">201-250 lbs.</option>
-       <option value="251-300">251-300 lbs.</option>
-       <option value="300+">300+ lbs.</option>
-     </select>
-
-     <label for="activityLevel">Your Activity Level</label>
-      <select id="ActivityLevel">
-        <option value="low">Low</option>
-        <option value="moderate">Moderate</option>
-        <option value="high">High</option>
-      </select>
-
-     <label for="desired">Desired weight you want to lose.</label>
-      <select id="Desired">
-        <option value="10-30-lose">10-30 lbs.</option>
-        <option value="30-60-lose">30-60 lbs.</option>
-        <option value="30-90-lose">30-90 lbs.</option>
-        <option value="100+-lose">100+ lbs.</option>
-      </select>
-    <input type="submit" value="Submit" id = "complete">
-  </form>
+  <p id ="header"></p>
+  
 </div>
+<script type="text/javascript">
+  
+
+</script>
 
 
 <script src="/socket.io/socket.io.js"></script>
@@ -177,4 +128,3 @@ ol {
     })
   </script>
 </html>
-
