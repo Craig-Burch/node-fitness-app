@@ -24,7 +24,7 @@ socket.emit('newSubmission', {   //welcome log for user to view
 });
 
 socket.emit('Header', {   //answer to user query 
-	header: 'Based on your selection, the following is recommended'
+	header: ':-: Thank you for using areFit! Click on the logo to return home :-'
 });
 
 socket.emit('outPut', {   //answer to user query 
