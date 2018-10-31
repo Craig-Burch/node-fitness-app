@@ -110,13 +110,25 @@ ol {
  
   <ol id ="messages"></ol>
 
-  
+  <script>
+    function answerCompiler(){
+      // var para = document.querySelector('p');
+        var A = document.getElementById("Gender").value;
+        if 
+          (A === document.getElementById("male").value) {
+            alert('A male');
+          }   else {
+              alert('a Female');
+        } 
+        
+    }
+</script>
   <form id="submit-form" class= "mobile" action = "output.html">
 
     <label for="gender">Gender</label>
      <select id="Gender">
-       <option value="male">Male</option>
-       <option value="female">Female</option>
+       <option id="male">Male</option>
+       <option id="female">Female</option>
      </select>
 
     <label for="age">Age</label>
@@ -162,10 +174,11 @@ ol {
         <option value="30-90-lose">30-90 lbs.</option>
         <option value="100+-lose">100+ lbs.</option>
       </select>
-    <input type="submit" value="Submit" id = "complete">
+    <input type="submit" value="Submit" id = "complete" onClick = "answerCompiler()">
   </form>
 </div>
 
+<p></p>  <!-- answer compiler output -->
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/libs/jquery-3.3.1.min.js"></script>

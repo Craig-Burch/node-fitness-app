@@ -23,15 +23,16 @@ socket.on('newSubmission', function (asubmission) { //greet the user
 	jQuery('#messages').append(li);
 });
 
-socket.on('Header', function (above) { //show output
-	console.log('Headert', above);
+socket.on('Header', function (above) { //show header
+	console.log('Header', above);
 	var abo = jQuery('<p></p>');
 	abo.text(`${above.header}:`);
 
 	jQuery('#header').append(abo);
 });
 
-socket.on('outPut', function (out) { //show output
+
+socket.on('outPut', function (out) { //show output attempt
 	console.log('outPut', out);
 	var ans = jQuery('<p></p>');
 	ans.text(`${out.YourAdvice}`);
