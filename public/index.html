@@ -111,67 +111,84 @@ ol {
 
   <script>
     function answerCompiler(){
-      // var para = document.querySelector('p');
-        var A = document.getElementById("Gender").value;
-        if 
-          (A === document.getElementById("male").value) {
-            alert('A male');
-          }   else {
-              alert('a Female');
-        } 
-        
+        var A = document.getElementById("Age").value;
+        var B = document.getElementById("Weight").value;
+        var C = document.getElementById("ActivityLevel").value;
+        var D = document.getElementById("Desired").value;
+
+        console.log('ADD = ')
+        console.log(A)
+        console.log(B)
+        console.log(C)
+        console.log(D)
+
+        var A = parseInt(A)
+        var B = parseInt(B)
+        var C = parseInt(C)
+        var D = parseInt(D)
+
+        var total = A + B + C + D
+
+        console.log(typeof total)
+
+        alert(total)
+
+        if (total <= 10) {
+          alert('Work out a little bit')
+        } else if (total <= 21 && total > 10) {
+          alert('Work out a little more')
+        } else if ( total <= 32 && total > 21) {
+          alert('Work out more often')
+        } else {
+          alert('WORK OUT A LOT!')
+        }
     }
 </script>
-  <form id="submit-form" class= "mobile" action = "output.html">
-
-    <label for="gender">Gender</label>
-     <select id="Gender">
-       <option id="male">Male</option>
-       <option id="female">Female</option>
-     </select>
+  <form id="submit-form" class= "mobile">
 
     <label for="age">Age</label>
      <select id="Age">
-       <option value="10-15">10-15 Years Old</option>
-       <option value="15-20">15-20 Years Old</option>
-       <option value="20-30">20-30 Years Old</option>
-       <option value="30-40">30-40 Years Old</option>
-       <option value="40-50">40-50 Years Old</option>
-       <option value="50-60">50-60 Years Old</option>
-       <option value="60+">60+ Years Old</option>
-     </select>
-
-    <label for="height">Height</label>
-     <select id="Height">
-       <option value="3ft-4ft">3ft-4ft</option>
-       <option value="4ft-5ft">4ft-5ft</option>
-       <option value="5ft-6ft">5ft-6ft</option>
-       <option value="6ft-7ft">6ft-7ft</option>
+       <option id="1" value="1">10-14 Years Old</option>
+       <option id="2" value="2">15-19 Years Old</option>
+       <option id="3" value="3">20-24 Years Old</option>
+       <option id="4" value="4">25-29 Years Old</option>
+       <option id="5" value="5">30-34 Years Old</option>
+       <option id="6" value="6">35-39 Years Old</option>
+       <option id="7" value="7">40-44 Years Old</option>
+       <option id="8" value="8">45-49 Years Old</option>
+       <option id="9" value="9">50-54 Years Old</option>
+       <option id="10" value="10">55+</option>
      </select>
 
     <label for="weight">Weight</label>
      <select id="Weight">
-       <option value="75-100">75-100 lbs.</option>
-       <option value="101-150">101-150 lbs.</option>
-       <option value="151-200">151-200 lbs.</option>
-       <option value="201-250">201-250 lbs.</option>
-       <option value="251-300">251-300 lbs.</option>
-       <option value="300+">300+ lbs.</option>
+       <option id="1" value="1">165-179 lbs.</option>
+       <option id="2" value="2">180-194 lbs.</option>
+       <option id="3" value="3">195-209 lbs.</option>
+       <option id="4" value="4">210-224 lbs.</option>
+       <option id="5" value="5">225-239 lbs.</option>
+       <option id="6" value="6">240-254 lbs.</option>
+       <option id="7" value="7">255-269 lbs.</option>
+       <option id="8" value="8">270-284 lbs.</option>
+       <option id="9" value="9">285-299 lbs.</option>
+       <option id="10" value="10">300+ lbs.</option>
      </select>
 
      <label for="activityLevel">Your Activity Level</label>
       <select id="ActivityLevel">
-        <option value="low">Low</option>
-        <option value="moderate">Moderate</option>
-        <option value="high">High</option>
+        <option id="2" value="2">Very Low</option>
+        <option id="4" value="4">Low</option>
+        <option id="6" value="6">Moderate</option>
+        <option id="8" value="8">High</option>
+        <option id="10" value="10">Very High</option>
       </select>
 
-     <label for="desired">Desired weight you want to lose.</label>
+     <label for="desired">Desired Weight You Want To Lose.</label>
       <select id="Desired">
-        <option value="10-30-lose">10-30 lbs.</option>
-        <option value="30-60-lose">30-60 lbs.</option>
-        <option value="30-90-lose">30-90 lbs.</option>
-        <option value="100+-lose">100+ lbs.</option>
+        <option id="3" value="3">10-39 lbs.</option>
+        <option id="6" value="6">40-69 lbs.</option>
+        <option id="9" value="9">70-99 lbs.</option>
+        <option id="12" value="12">100+ lbs.</option>
       </select>
     <input type="submit" value="Submit" id = "complete" onClick = "answerCompiler()">
   </form>
@@ -181,7 +198,7 @@ ol {
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/libs/jquery-3.3.1.min.js"></script>
- <script src = "/js/index.js"> </script>
+<script src = "/js/index.js"> </script>
 </body>
   <script type="text/javascript">
    AOS.init({
@@ -189,4 +206,3 @@ ol {
     })
   </script>
 </html>
-
