@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>  
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+</head>
+<style>
+
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+select[type=text], select, option {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #FF6263;
+    width:130px;
+    color: black;
+    font-size: 17px;
+    padding: 12px 20px; 
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+}
+input[type=submit]:hover {
+    background-color: #FF314F;
+    border: 1px solid black;
+}
+.container {
+    border-radius: 20px;
+    background-color: #CFD0D7;
+    padding: 20px;
+    font-family: 'Yantramanav'; 
+    text-align: center;
+    font-size: 30px;
+    border:3px solid #FFF7F1;
+}
+label {
+    font-weight: 700;
+}
+.headerbg {
+	float: left;
+	width: 100%;
+	height:30%;
+}
+.headerimage {
+    width: 30%;
+    height: 30%;
+    margin-left:0%;
+    border-radius: 160px;
+    margin-top: 20px;
+    margin-bottom:30px;
+    display:inline-block;
+    border: 3px solid #F9FDFF;
+    background-color: #FD6660;
+
+}
+
+ol {
+	list-style-type: none;
+	font-size: 30px;
+	font-weight: 700;
+	color: #FD6660;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .container {
+       font-size: 40px;
+    }
+}@media only screen and (max-width: 600px) {
+    .headerimage  {
+       width: 80%;
+       height: 40%;
+       border-radius: 30px;
+    }
+}@media only screen and (max-width: 600px) {
+    .headerimage img {
+       width: 60%;
+       height: 60%;
+    }
+}@media only screen and (max-width: 600px) {
+    input[type=submit] {
+       font-size: 23px;
+       width:160px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .mobile option {
+       font-size: 23px;
+    }
+}
+</style>
+<body style = "background-color: #FF6263;">
+<div class="container">
+  <div class = "headerbg">
+    <div class = "headerimage"> 
+    	<img data-aos="flip-down" src = "fit1.png" height =50%; width = 50%; >
+    </div>
+  </div>
+ 
+  <ol id ="messages"></ol>
+
+  <script>
+    function answerCompiler(){
+        var A = document.getElementById("Age").value;
+        var B = document.getElementById("Weight").value;
+        var C = document.getElementById("ActivityLevel").value;
+        var D = document.getElementById("Desired").value;
+
+        console.log('ADD = ')
+        console.log(A)
+        console.log(B)
+        console.log(C)
+        console.log(D)
+
+        var A = parseInt(A)
+        var B = parseInt(B)
+        var C = parseInt(C)
+        var D = parseInt(D)
+
+        var total = A + B + C + D
+
+        console.log(typeof total)
+
+        alert(total)
+
+        if (total <= 10) {
+          alert('Work out a little bit')
+        } else if (total <= 21 && total > 10) {
+          alert('Work out a little more')
+        } else if ( total <= 32 && total > 21) {
+          alert('Work out more often')
+        } else {
+          alert('WORK OUT A LOT!')
+        }
+    }
+</script>
+  <form id="submit-form" class= "mobile">
+
+    <label for="age">Age</label>
+     <select id="Age">
+       <option id="1" value="1">10-14 Years Old</option>
+       <option id="2" value="2">15-19 Years Old</option>
+       <option id="3" value="3">20-24 Years Old</option>
+       <option id="4" value="4">25-29 Years Old</option>
+       <option id="5" value="5">30-34 Years Old</option>
+       <option id="6" value="6">35-39 Years Old</option>
+       <option id="7" value="7">40-44 Years Old</option>
+       <option id="8" value="8">45-49 Years Old</option>
+       <option id="9" value="9">50-54 Years Old</option>
+       <option id="10" value="10">55+</option>
+     </select>
+
+    <label for="weight">Weight</label>
+     <select id="Weight">
+       <option id="1" value="1">165-179 lbs.</option>
+       <option id="2" value="2">180-194 lbs.</option>
+       <option id="3" value="3">195-209 lbs.</option>
+       <option id="4" value="4">210-224 lbs.</option>
+       <option id="5" value="5">225-239 lbs.</option>
+       <option id="6" value="6">240-254 lbs.</option>
+       <option id="7" value="7">255-269 lbs.</option>
+       <option id="8" value="8">270-284 lbs.</option>
+       <option id="9" value="9">285-299 lbs.</option>
+       <option id="10" value="10">300+ lbs.</option>
+     </select>
+
+     <label for="activityLevel">Your Activity Level</label>
+      <select id="ActivityLevel">
+        <option id="2" value="2">Very Low</option>
+        <option id="4" value="4">Low</option>
+        <option id="6" value="6">Moderate</option>
+        <option id="8" value="8">High</option>
+        <option id="10" value="10">Very High</option>
+      </select>
+
+     <label for="desired">Desired Weight You Want To Lose.</label>
+      <select id="Desired">
+        <option id="3" value="3">10-39 lbs.</option>
+        <option id="6" value="6">40-69 lbs.</option>
+        <option id="9" value="9">70-99 lbs.</option>
+        <option id="12" value="12">100+ lbs.</option>
+      </select>
+    <input type="submit" value="Submit" id = "complete" onClick = "answerCompiler()">
+  </form>
+</div>
+
+<p></p>  <!-- answer compiler output -->
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/libs/jquery-3.3.1.min.js"></script>
+<script src = "/js/index.js"> </script>
+</body>
+  <script type="text/javascript">
+   AOS.init({
+     duration: 1700,
+    })
+  </script>
+</html>
