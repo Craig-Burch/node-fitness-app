@@ -7,51 +7,69 @@
   <link rel="shortcut icon" type="image/png" href="/fit1.png">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="scss/style.scss" rel="stylesheet/scss">
 	<script type="text/javascript" src= "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>  
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 <style>
-
-
-@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 select[type=text], select, option {
     width: 100%; 
     padding: 12px; 
     border: 1px solid #ccc; 
     border-radius: 20px; 
+    border:0px;
+    outline:0px;
+    box-shadow: 2px 4px #888888;
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
+    font-size: 15px;
     resize: vertical;
 }
 input[type=submit] {
     background-color: #FF6263;
     width:130px;
     color: black;
-    font-size: 17px;
+    font-size: 20px;
     padding: 12px 20px; 
-    border: none;
+    margin-bottom: 20px;
+    border: 0px;
+    outline: 0px;
     cursor: pointer;
     border-radius: 35px;
+    box-shadow: 2px 4px #888888;
 }
 input[type=submit]:hover {
-    background-color: #FF314F;
-    border: 1px solid black;
+    box-shadow: 4px 8px #888888;
+    transition: .5s ease;
+    color:white;
 }
 .container {
-    margin-top: 3%;
-    width: 25%;
-    border-radius: 20px;
+    margin-top: 5%;
+    width: 500px;
     background-color: #CFD0D7;
-    padding: 20px;
-    font-family: 'Yantramanav'; 
+    /*padding: 20px;*/
     text-align: center;
     font-size: 30px;
-    border:3px solid #FFF7F1;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    border-radius: 40px;
+    border:5px solid #1A1E1D;
+}
+.middleContainer {
+   border-radius: 35px;
+   border:25px solid #FF6263;
+}
+.innerContainer {
+   border-radius: 10px;
+   border:15px solid #1A1E1D;
+   padding-right: 15px;
+   padding-left: 15px;
 }
 label {
     font-weight: 700;
+    font-size: 20px;
 }
 .headerbg {
 	float: left;
@@ -73,25 +91,32 @@ label {
 
 ol {
 	list-style-type: none;
-	font-size: 30px;
+	font-size: 28px;
 	font-weight: 700;
 	color: #FD6660;
   text-align: center;
 }
+@media only screen and (max-width: 1600px) {
+.container {
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+ }
+}
 @media only screen and (max-width: 600px) {
     .container {
        font-size: 40px;
+       width:95%;
     }
 }@media only screen and (max-width: 600px) {
     .headerimage  {
-       width: 80%;
-       height: 40%;
+       width: 200px;
+       height: 180px;
        border-radius: 30px;
     }
 }@media only screen and (max-width: 600px) {
     .headerimage img {
-       width: 60%;
-       height: 60%;
+       width: 175px;
+       height: 175px;
     }
 }@media only screen and (max-width: 600px) {
     input[type=submit] {
@@ -105,54 +130,44 @@ ol {
     }
 }
 </style>
-<body style = "background-color: #FF6263;">
-<div class="container">
+<body style = "background-image: url('hero.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+  <!-- background: #FF6263; -->
+<div data-aos="slide-right" class="container">
+ <div class="middleContainer">
+  <div class="innerContainer">
   <div class = "headerbg">
     <div class = "headerimage"> 
-    	<img data-aos="flip-down" src = "fit1.png" height =50%; width = 50%; >
+    	<img data-aos="flip-down" src = "fit1.png" height =99%; width = 90%; >
     </div>
   </div>
- 
-  <ol id ="messages"></ol>
-
   <script>
     function answerCompiler(){
-        var A = document.getElementById("Age").value;
-        var B = document.getElementById("Weight").value;
-        var C = document.getElementById("ActivityLevel").value;
-        var D = document.getElementById("Desired").value;
-
-        console.log('ADD = ')
-        console.log(A)
-        console.log(B)
-        console.log(C)
-        console.log(D)
-
-        var A = parseInt(A)
-        var B = parseInt(B)
-        var C = parseInt(C)
-        var D = parseInt(D)
-
-        var total = A + B + C + D
-
-        console.log(typeof total)
-
-        alert(total)
-
-        if (total <= 10) {
-          alert('Work out a little bit')
+        const age = document.getElementById("Age").value;
+        const weight = document.getElementById("Weight").value;
+        const activityLevel = document.getElementById("ActivityLevel").value;
+        const desired = document.getElementById("Desired").value;
+        console.log('The higher the score, the more workout time is required');
+        console.log('ADD ', age,weight,activityLevel,desired);
+        const a2 = parseInt(age);
+        const w2 = parseInt(weight);
+        const al2 = parseInt(activityLevel);
+        const d2 = parseInt(desired);
+        const total = a2 + w2 + al2 + d2;
+        console.log(total);
+        if (d2 === 12) {
+          alert('Please talk to your doctor before attempting to lose this much weight. We will not be held liable for any stress on a persons health.')
+        } else if (total <= 10) {
+          alert('Your workout will require 2-3 days a week. Start with cardio.')
         } else if (total <= 21 && total > 10) {
-          alert('Work out a little more')
+          alert('Your workout will require 3-4 days a week. Start with cardio and lifting.')
         } else if ( total <= 32 && total > 21) {
-          alert('Work out more often')
+          alert('Work out 4-5 days a week doing cardio and lifting.')
         } else {
-          alert('WORK OUT A LOT!')
+          alert('Work out 5-6 days a week doing cardio and lifting.') 
         }
     }
-
 </script>
-  <form id="submit-form" class= "mobile">
-
+  <form onsubmit="return false" id="submit-form" class= "mobile">
     <label for="age">Age</label>
      <select id="Age">
        <option id="1" value="1">10-14 Years Old</option>
@@ -166,7 +181,6 @@ ol {
        <option id="9" value="9">50-54 Years Old</option>
        <option id="10" value="10">55+</option>
      </select>
-
     <label for="weight">Weight</label>
      <select id="Weight">
        <option id="1" value="1">165-179 lbs.</option>
@@ -180,29 +194,26 @@ ol {
        <option id="9" value="9">285-299 lbs.</option>
        <option id="10" value="10">300+ lbs.</option>
      </select>
-
      <label for="activityLevel">Your Activity Level</label>
       <select id="ActivityLevel">
-        <option id="2" value="2">Very Low</option>
-        <option id="4" value="4">Low</option>
+        <option id="10" value="10">Very Low</option>
+        <option id="8" value="8">Low</option>
         <option id="6" value="6">Moderate</option>
-        <option id="8" value="8">High</option>
-        <option id="10" value="10">Very High</option>
+        <option id="4" value="4">High</option>
+        <option id="2" value="2">Very High</option>
       </select>
-
      <label for="desired">Desired Weight You Want To Lose.</label>
       <select id="Desired">
-        <option id="3" value="3">10-39 lbs.</option>
+        <option id="3" value="3">20-39 lbs.</option>
         <option id="6" value="6">40-69 lbs.</option>
         <option id="9" value="9">70-99 lbs.</option>
         <option id="12" value="12">100+ lbs.</option>
       </select>
     <input type="submit" value="Submit" id = "complete" onClick = "answerCompiler()">
   </form>
+  </div>
+ </div>
 </div>
-
-<p></p>  <!-- answer compiler output -->
-
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/libs/jquery-3.3.1.min.js"></script>
 <script src = "/js/index.js"> </script>

@@ -22,7 +22,9 @@
     .carousel {
       height: 60vh;
     }
-
+    .coColor {
+      color: #FF6263;
+    }
     @media (max-width: 740px) {
 
       html,
@@ -48,43 +50,34 @@
         background: #929FBA !important;
       }
     }
-
   </style>
 </head>
-
 <body>
-
   <header>
-
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar" style = "background-color: #FF6263">
       <div class="container">
-
         <!-- Brand -->
         <a class="navbar-brand" href="">
           <i class="fas fa-heartbeat"></i>
           <strong>OurFit</strong>
         </a>
-
         <!-- Collapse -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- Links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
           <!-- Left -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/app.html">App</a>
+              <a class="nav-link" href="/app.html" target="_blank">View App</a>
             </li>
           </ul>
-
           <!-- Right -->
           <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="https://www.facebook.com/mdbootstrap" class="nav-link" target="_blank">
                 <i class="fab fa-facebook-f"></i>
               </a>
@@ -93,36 +86,31 @@
               <a href="https://twitter.com/MDBootstrap" class="nav-link" target="_blank">
                 <i class="fab fa-twitter"></i>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
-              <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="nav-link border border-light rounded"
+              <a href="https://github.com/Craig-Burch/node-fitness-app" class="nav-link border border-light rounded"
                 target="_blank">
                 <i class="fab fa-github mr-2"></i>OurFit GitHub
               </a>
             </li>
           </ul>
-
         </div>
-
       </div>
     </nav>
     <div class="view" style="background-image: url('hero.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
     <!-- Mask & flexbox options-->
     <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
       <!-- Content -->
-      <div class="container">
+      <div class="container" style="margin-top:7%">
         <!--Grid row-->
-        <div class="row">
+        <div class="row headerQueries">
           <!--Grid column-->
           <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
-            <h1 class="h1-responsive font-weight-bold mt-sm-5">Make purchases with our app </h1>
+            <h1 class="h1-responsive font-weight-bold mt-sm-5">Get Workout Advice <br> from our App! </h1>
             <hr class="hr-light">
-            <h6 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi
-              fuga nesciunt
-              dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
-              iste.</h6>
-            <a class="btn btn-white">Download</a>
-            <a class="btn btn-outline-white">Learn more</a>
+            <h5 class="mb-4">Looking for advice for your workouts? We have your back! Check out our app and answer a few questions to see what the next step is to a healthier you.</h5>
+            <a class="btn btn-outline-white" href="/app.html" target="_blank">View App</a>
+            <!-- <a class="btn btn-outline-white">Learn more</a> -->
           </div>
           <!--Grid column-->
           <!--Grid column-->
@@ -138,96 +126,24 @@
     <!-- Mask & flexbox options-->
   </div>
      
-   
-
-     
-
   </header>
-
   <!--Main layout-->
   <main>
     <div class="container">
-
-      <!--Section: Main info-->
-      <section class="mt-5 wow fadeIn">
-
-        <!--Grid row-->
-        <div class="row">
-
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
-
-            <img src="heart.png" class="img-fluid z-1-half"
-              alt="">
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-6 mb-4">
-
-            <!-- Main heading -->
-            <h3 class="h3 mb-3">Material Design for Bootstrap</h3>
-            <p>This template is created with Material Design for Bootstrap (
-              <strong>MDB</strong> ) framework.</p>
-            <p>Read details below to learn more about MDB.</p>
-            <!-- Main heading -->
-
-            <hr>
-
-            <p>
-              <strong>400+</strong> material UI elements,
-              <strong>600+</strong> material icons,
-              <strong>74</strong> CSS animations, SASS files, templates, tutorials and many more.
-              <strong>Free for personal and commercial use.</strong>
-            </p>
-
-            <!-- CTA -->
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" class="btn btn-grey btn-md">Download
-              <i class="fas fa-download ml-1"></i>
-            </a>
-            <a target="_blank" href="https://mdbootstrap.com/docs/jquery/components/" class="btn btn-grey btn-md">Live
-              demo
-              <i class="far fa-image ml-1"></i>
-            </a>
-
-          </div>
-          <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
-      </section>
-      <!--Section: Main info-->
-
-      <hr class="my-5" style = "background-color: #FF6263">
-
-      <!--Section: Main features & Quick Start-->
-      <section>
-
+      <!-- <section>
         <h3 class="h3 text-center mb-5">About MDB</h3>
-
-        <!--Grid row-->
         <div class="row wow fadeIn">
-
-          <!--Grid column-->
           <div class="col-lg-6 col-md-12 px-4">
-
-            <!--First row-->
             <div class="row">
               <div class="col-1 mr-3">
-                <i class="fas fa-code fa-2x indigo-text"></i>
+                <i class="fas fa-code fa-2x coColor"></i>
               </div>
               <div class="col-10">
                 <h5 class="feature-title">Bootstrap 4</h5>
                 <p class="grey-text">Thanks to MDB you can take advantage of all feature of newest Bootstrap 4.</p>
               </div>
             </div>
-            <!--/First row-->
-
             <div style="height:30px"></div>
-
-            <!--Second row-->
             <div class="row">
               <div class="col-1 mr-3">
                 <i class="fas fa-book fa-2x blue-text"></i>
@@ -240,11 +156,7 @@
                 </p>
               </div>
             </div>
-            <!--/Second row-->
-
             <div style="height:30px"></div>
-
-            <!--Third row-->
             <div class="row">
               <div class="col-1 mr-3">
                 <i class="fas fa-graduation-cap fa-2x cyan-text"></i>
@@ -256,25 +168,15 @@
                   how to use MDB as well as other technologies.</p>
               </div>
             </div>
-            <!--/Third row-->
-
           </div>
-          <!--/Grid column-->
-
-          <!--Grid column-->
           <div class="col-lg-6 col-md-12">
-
             <p class="h5 text-center mb-4">Watch our "5 min Quick Start" tutorial</p>
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cXTThxoywNQ" allowfullscreen></iframe>
             </div>
           </div>
-          <!--/Grid column-->
-
         </div>
-        <!--/Grid row-->
-
-      </section>
+      </section> -->
       <!--Section: Main features & Quick Start-->
 
       <hr class="my-5" style = "background-color: #FF6263">
@@ -282,7 +184,7 @@
       <!--Section: Not enough-->
       <section>
 
-        <h2 class="my-5 h3 text-center">Not enough?</h2>
+        <h2 class="my-5 h3 text-center">Welcome to Ourfit!</h2>
 
         <!--First row-->
         <div class="row features-small mb-5 mt-3 wow fadeIn">
@@ -292,12 +194,11 @@
             <!--First row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-running fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">Free for personal and commercial use</h6>
-                <p class="grey-text">Our license is user-friendly. Feel free to use MDB for both private as well as
-                  commercial projects.
+                <h5 class="feature-title">Accurately Determine Your Workouts</h5>
+                <p class="grey-text">We at Ourfit implement a custom score system based on your unique inputs while you use our app. Allowing us to give you custom tailored responses to your specific needs.
                 </p>
                 <div style="height:15px"></div>
               </div>
@@ -307,11 +208,11 @@
             <!--Second row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-dumbbell fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">400+ UI elements</h6>
-                <p class="grey-text">An impressive collection of flexible components allows you to develop any project.
+                <h5 class="feature-title">Let's Get The Ball Rolling</h5>
+                <p class="grey-text">We are so happy you are here and ready to assist you with your fitness needs. Hop on over to our <strong><a href="/app.html" target="_blank">App</a></strong> and we can get started!
                 </p>
                 <div style="height:15px"></div>
               </div>
@@ -321,36 +222,21 @@
             <!--Third row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-grin-beam-sweat fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">600+ icons</h6>
-                <p class="grey-text">Hundreds of useful, scalable, vector icons at your disposal.</p>
+                <h5 class="feature-title">We Know..</h5>
+                <p class="grey-text">Hey, we get it, starting your fitness journey can be scary. Let us help you take that first big step!</p>
                 <div style="height:15px"></div>
               </div>
             </div>
             <!--/Third row-->
-
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Fully responsive</h6>
-                <p class="grey-text">It doesn't matter whether your project will be displayed on desktop, laptop,
-                  tablet or mobile phone. MDB
-                  looks great on each screen.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
           </div>
           <!--/First column-->
 
           <!--Second column-->
           <div class="col-md-4 flex-center">
-            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="MDB Magazine Template displayed on iPhone"
+            <img src="https://mdbootstrap.com/img/Others/screens.png" alt="Ourfit"
               class="z-depth-0 img-fluid">
           </div>
           <!--/Second column-->
@@ -360,12 +246,11 @@
             <!--First row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-check-circle fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">70+ CSS animations</h6>
-                <p class="grey-text">Neat and easy to use animations, which will increase the interactivity of your
-                  project and delight your visitors.
+                <h5 class="feature-title">24/7 Support</h5>
+                <p class="grey-text"> At Ourfit, we have fitness professionals standing by 24/7! Contact us anytime to receive advice on whats next after using our <strong><a href="/app.html" target="_blank">App.</a></strong>
                 </p>
                 <div style="height:15px"></div>
               </div>
@@ -375,11 +260,11 @@
             <!--Second row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-book-reader fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">Plenty of useful templates</h6>
-                <p class="grey-text">Need inspiration? Use one of our predefined templates for free.</p>
+                <h5 class="feature-title">Inspiration</h5>
+                <p class="grey-text">Need inspiration? We have a magazine you can subscribe to as well.</p>
                 <div style="height:15px"></div>
               </div>
             </div>
@@ -388,31 +273,16 @@
             <!--Third row-->
             <div class="row">
               <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
+                <i class="fas fa-thumbs-up fa-2x coColor"></i>
               </div>
               <div class="col-10">
-                <h6 class="feature-title">Easy installation</h6>
-                <p class="grey-text">5 minutes, a few clicks and... done. You will be surprised at how easy it is.
+                <h5 class="feature-title">Oh Yea!</h5>
+                <p class="grey-text">Dont forget to rate our App if you like it! It will help us out greatly! Thank you so much for checking out Ourfit and we cant wait to see you again! 
                 </p>
                 <div style="height:15px"></div>
               </div>
             </div>
             <!--/Third row-->
-
-            <!--Fourth row-->
-            <div class="row">
-              <div class="col-2">
-                <i class="fas fa-check-circle fa-2x indigo-text"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="feature-title">Easy to use and customize</h6>
-                <p class="grey-text">Using MDB is straightforward and pleasant. Components flexibility allows you deep
-                  customization. You will
-                  easily adjust each component to suit your needs.</p>
-                <div style="height:15px"></div>
-              </div>
-            </div>
-            <!--/Fourth row-->
           </div>
           <!--/Third column-->
 
@@ -446,14 +316,10 @@
             </div>
             <!--Content-->
             <p style="margin-left: 15%; margin-right: 15%">
-              <i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-              eos
-              id officiis hic tenetur quae quaerat ad velit ab. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Dolore cum accusamus eveniet molestias voluptatum inventore laboriosam labore
-              sit, aspernatur praesentium iste impedit quidem dolor veniam.
+              <i class="fas fa-quote-left"></i> Ourfit really helped me get back on track with my workouts. 
             </p>
             <h4 class="font-weight-bold">Anna Deynah</h4>
-            <h6 class="font-weight-bold my-3">Founder at ET Company</h6>
+            <h6 class="font-weight-bold my-3">Customer</h6>
             <!--Review-->
             <i class="fas fa-star red-text"> </i>
             <i class="fas fa-star red-text"> </i>
@@ -473,13 +339,9 @@
             </div>
             <!--Content-->
             <p style="margin-left: 15%; margin-right: 15%">
-              <i class="fas fa-quote-left"></i> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-              odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-              porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore. </p>
+              <i class="fas fa-quote-left"></i> Their customer support is next level! </p>
             <h4 class="font-weight-bold">Maria Kate</h4>
-            <h6 class="font-weight-bold my-3">Photographer at Studio LA</h6>
+            <h6 class="font-weight-bold my-3">Customer</h6>
             <!--Review-->
             <i class="fas fa-star red-text"> </i>
             <i class="fas fa-star red-text"> </i>
@@ -499,12 +361,9 @@
             </div>
             <!--Content-->
             <p style="margin-left: 15%; margin-right: 15%" >
-              <i class="fas fa-quote-left"></i> Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-              error sit voluptatem accusantium doloremque laudantium.</p>
+              <i class="fas fa-quote-left"></i> I found Ourfit at a really great time in my life and it has done wonders for me! Thank you, Ourfit!</p>
             <h4 class="font-weight-bold">John Doe</h4>
-            <h6 class="font-weight-bold my-3">Front-end Developer in NY</h6>
+            <h6 class="font-weight-bold my-3">Customer</h6>
             <!--Review-->
             <i class="fas fa-star red-text"> </i>
             <i class="fas fa-star red-text"> </i>
@@ -547,35 +406,35 @@
 
     <!-- Social icons -->
     <div class="pb-4">
-      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+      <a href="">
         <i class="fab fa-facebook-f mr-3"></i>
       </a>
 
-      <a href="https://twitter.com/MDBootstrap" target="_blank">
+      <a href="">
         <i class="fab fa-twitter mr-3"></i>
       </a>
 
-      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+      <a href="">
         <i class="fab fa-youtube mr-3"></i>
       </a>
 
-      <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+      <a href="">
         <i class="fab fa-google-plus-g mr-3"></i>
       </a>
 
-      <a href="https://dribbble.com/mdbootstrap" target="_blank">
+      <a href="">
         <i class="fab fa-dribbble mr-3"></i>
       </a>
 
-      <a href="https://pinterest.com/mdbootstrap" target="_blank">
+      <a href="">
         <i class="fab fa-pinterest mr-3"></i>
       </a>
 
-      <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+      <a href="">
         <i class="fab fa-github mr-3"></i>
       </a>
 
-      <a href="http://codepen.io/mdbootstrap/" target="_blank">
+      <a href="">
         <i class="fab fa-codepen mr-3"></i>
       </a>
     </div>
@@ -584,7 +443,7 @@
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2019 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+      <a href="/" target="_blank"> OurFit </a>
     </div>
     <!--/.Copyright-->
 
