@@ -20,15 +20,15 @@ io.on('connection', (socket) => {
 
 socket.emit('newSubmission', {   //welcome log for user to view
 	for: 'Admin',
-	text: 'Welcome to arefit'
+	text: 'Welcome!'
 });
 
 socket.emit('Header', {   //answer to user query 
-	header: ':-: Thank you for using areFit! Click on the logo to return home :-'
+	header: ':-: Thank you for using OurFit! Click on the logo to return home :-'
 });
 
 socket.emit('outPut', {   //answer to user query 
-	YourAdvice: 'work out more'
+	YourAdvice: 'filler text'
 });
 
 socket.on('createSub', (newSubs) => {
